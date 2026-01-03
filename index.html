@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family Chore Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Fredoka', 'sans-serif'],
+            },
+            fontSize: {
+              // Boosting default sizes for desktop web optimization
+              'base': ['1rem', { lineHeight: '1.5rem' }],
+              'lg': ['1.125rem', { lineHeight: '1.75rem' }],
+              'xl': ['1.25rem', { lineHeight: '1.75rem' }],
+              '2xl': ['1.5rem', { lineHeight: '2rem' }],
+            },
+            colors: {
+              cream: '#FFF9F0',
+              paper: '#FFFFFF',
+              primary: '#1A1A1A',
+              accentGreen: '#2E5C31',
+              accentGreenLight: '#56AB5B',
+              accentYellow: '#F4D06F',
+              accentRed: '#E57373',
+              borderDark: '#1A1A1A',
+            },
+            boxShadow: {
+              'hand': '2px 3px 0px 0px rgba(0,0,0,0.1)',
+              'hand-hover': '3px 4px 0px 0px rgba(0,0,0,0.15)',
+            },
+            animation: {
+              'spin-slow': 'spin 3s linear infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #FFF9F0;
+        color: #1A1A1A;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      /* 
+         Standard "Hand Drawn" shape class. 
+         Using a single consistent irregular border-radius for all "cards" as requested.
+      */
+      .shape-hand {
+        border-radius: 20px 255px 20px 255px / 255px 20px 255px 20px;
+      }
+      
+      .shape-hand-sm {
+        border-radius: 10px 20px 10px 20px / 20px 10px 20px 10px;
+      }
+      
+      h1, h2, h3, button, input {
+        letter-spacing: -0.02em;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
